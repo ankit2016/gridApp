@@ -1,0 +1,10 @@
+<div class="header">
+  <div class="title">My Responsive Grid</div>
+</div>
+
+<div class="sub-header">
+  <div class="title sub-title">Customise</div>
+  <div class="edit-grid" [ngClass]="{'close-editor': openTool}" (click)="openGridConfigTool()"></div>
+</div>
+
+<app-grid-tool [openTool] = openTool (refreshGridConfig) = "refreshGrid()"></app-grid-tool>

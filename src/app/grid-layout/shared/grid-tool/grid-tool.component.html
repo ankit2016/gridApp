@@ -1,0 +1,13 @@
+<div class="container" [ngClass]="{'open': openTool}">
+  <form>
+    <label>Tile Width</label>
+    <input name="width" [(ngModel)]="gridWidth" placeholder="width  in px" type="text">
+    <label>Tile Height</label>
+    <input name="height" [(ngModel)]="gridHeight" placeholder="height in px" type="text">
+    <label>Tile Margin</label>
+    <input name="margin" [(ngModel)]="gridMargin" placeholder="margin in px" type="text">
+    <input type="button" value="STORE">
+    <input type="button" value="UPDATE" (click)="saveGridConfig()">
+    <div class="clear"></div>
+  </form>
+</div>

@@ -1,0 +1,22 @@
+<app-grid-header (refreshGridConfig)="setGridConfig()"></app-grid-header>
+<div class="grid-container">
+  <div *ngFor="let item of gridList; let index = index" class="grid-tile" [style.width.px]="gridWidth"
+    [style.height.px]="gridHeight" [style.margin.px]="gridMargin" style="border-width: 1px;">
+    <div class="tile-title">
+      <div class="triangle-bottomleft"></div>Title {{index + 1}}
+    </div>
+    <div class="center-text">{{index + 1}}</div>
+    <div class="star" [ngClass]="{'hilight-gold': item == 2, hilight: item == 1 }"
+      title="single click to like or unlike, double click to golden like" (click)="submitRating(item, index ,1)"
+      (dblclick)="submitRating(item, index, 2)"></div>
+    <div class="info-holder">
+      <div class="info" (click)="getInfo(index)">info</div>
+    </div>
+    <hr class="line">
+    <div class="open-holder">
+      <div class="open" (click)="gotoGridDetail(index+1)">open</div>
+    </div>
+  </div>
+  <app-grid-info *ngIf="openGridInfo" (closeInfoPopup)="closeInfoPopup()" [selectedGrid]=selectedGrid></app-grid-info>
+</div>
+<app-grid-footer></app-grid-footer>

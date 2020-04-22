@@ -1,0 +1,13 @@
+<app-grid-header (refreshGridConfig) = "setGridConfig()"></app-grid-header>
+<div class="container-1">
+  <div class="holder">
+    <h1>heading-{{gridDetail}}</h1>
+    <p>Detail About-{{gridDetail}}</p>
+    <p>
+      <button  class="button" role="button" (click)="backToGridlayout()">
+        <span >Back to Tiles </span>
+      </button>
+    </p>
+  </div>
+</div>
+<app-grid-footer></app-grid-footer>

@@ -1,0 +1,157 @@
+
+.grid-container {
+    position: absolute;
+    width: 100%;
+    max-width: 100%;
+    height: calc(100% - 120px);
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+.grid-list-container {
+    position: relative;
+    margin: 0 auto;
+}
+
+.grid-container  > div:nth-child(odd) {
+    background-color: #9139db;
+}
+
+.grid-container  > div:nth-child(even) {
+    background-color: #db6739;
+}
+
+.grid-tile {
+    position: relative;
+    float: left;
+    clear: none;
+    // transition: all .3s;
+}
+.grid-tile:hover{
+    -webkit-box-shadow: 10px 10px 5px -7px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 5px -7px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 5px -7px rgba(0,0,0,0.75);
+    // transform: scale(1.1);
+}
+
+.tile-title {
+    max-width: 100%;
+    height: 40px;
+    width: 100%;
+    color: #5c1616;
+    font-weight: 600;
+    font-size: 22px;
+    text-align: center;
+    line-height: 40px;
+    background: #eee;
+    opacity: .75;
+}
+
+
+.triangle-bottomleft {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-bottom: 100px solid rgba(216,216,216,.315);
+    border-right: 100px solid transparent;
+}
+
+.center-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80px;
+    height: 80px;
+    font-size: 60px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 70px;
+    border-radius: 40px;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    color: #fff;
+    -webkit-box-shadow: 0 0 6px 2px rgba(255,255,255,1);
+    box-shadow: 0 0 6px 2px rgba(255,255,255,1);
+}
+
+.star {
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    width: 32px;
+    height: 32px;
+    background-image: url(/assets/images/star-trans.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 16px;
+    cursor: pointer;
+    -webkit-box-shadow: 1px 1px 5px 0 rgba(255,255,255,1);
+    box-shadow: 1px 1px 5px 0 rgba(255,255,255,1);
+}
+
+.hilight-gold {
+    background-image: url(/assets/images/star-gold.png);
+}
+.hilight {
+    background-image: url(/assets/images/star-black.png);
+}
+
+.info-holder{
+    position: absolute;
+    bottom: 38px;
+    width: 100%;
+    height: 30px;
+}
+.info {
+    position: absolute;
+    left: 10px;
+    bottom: 0;
+    height: 25px;
+    width: 60px;
+    line-height: 22px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 12px;
+    color: #fff;
+}
+.info, .open {
+    -webkit-transition-duration: .2s;
+    transition-duration: .2s;
+}
+.line {
+    position: absolute;
+    bottom: 32px;
+    width: 100%;
+    margin: 0;
+}
+
+.open-holder {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 35px;
+}
+
+.open {
+    position: absolute;
+    right: 10px;
+    bottom: 3px;
+    height: 25px;
+    width: 60px;
+    line-height: 22px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 12px;
+    color: #fff;
+}
+
+
+
+.app-grid-info{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
